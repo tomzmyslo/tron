@@ -1,0 +1,25 @@
+{
+  "name": "tron",
+  "productName": "Tron",
+  "version": "0.1.0",
+  "description": "Testing Electron",
+  "main": "main.js",
+  "author": "Tom Zmyslo",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "build:react": "./node_modules/.bin/esbuild ./src/app.jsx --bundle --outfile=./render.js",
+    "build:react:watch": "./node_modules/.bin/esbuild ./src/app.jsx --bundle --watch --outfile=./render.js",
+    "build:css": "npx tailwindcss -i ./src/css/tailwind.css -o ./styles.css",
+    "build:css:watch": "npx tailwindcss -i ./src/css/tailwind.css -o ./styles.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "electron": "^15.3.0",
+    "esbuild": "^0.13.11",
+    "postcss": "^8.3.11",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "tailwindcss": "^2.2.19"
+  }
+}
